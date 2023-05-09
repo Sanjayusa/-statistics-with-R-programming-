@@ -1,0 +1,32 @@
+INPUT :
+# Values of height
+151, 174, 138, 186, 128, 136, 179, 163, 152, 131
+# Values of weight.
+63, 81, 56, 91, 47, 57, 76, 72, 62, 48
+Predict the weight of a person with height 170. Visualize the regression graphically.
+
+# Values of height
+height <- c(151, 174, 138, 186, 128, 136, 179, 163, 152, 131)
+# Values of weight
+weight <- c(63, 81, 56, 91, 47, 57, 76, 72, 62, 48)
+# Create a data frame
+df <- data.frame(height, weight)
+
+# Plot the data using a scatter plot
+plot(df$height, df$weight, main = "Scatter Plot of Height vs Weight", 
+     xlab = "Height (cm)", ylab = "Weight (kg)")
+
+# Fit a linear regression model
+fit <- lm(weight ~ height, data = df)
+
+# Check the summary of the model
+summary(fit)
+
+# Visualize the linear regression line on the scatter plot
+plot(df$height, df$weight, main = "Scatter Plot of Height vs Weight with Regression Line", 
+     xlab = "Height (cm)", ylab = "Weight (kg)")
+abline(fit, col = "red")
+
+# Predict the weight of a person with height 170
+newdata <- data.frame(height = 170)
+predict(fit, newdata)
