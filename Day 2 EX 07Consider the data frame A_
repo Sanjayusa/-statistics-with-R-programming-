@@ -1,0 +1,14 @@
+# create sample data frame
+A <- data.frame(col1 = c(3, 1, 2, 4),
+                col2 = c(9, 8, 6, 7),
+                col3 = c(5, 2, 1, 4),
+                row.names = c("tree", "min", "mean", "max"))
+
+# order data frame by first column
+A_ordered <- A[order(A$col1), ]
+
+# rename row names
+rownames(A_ordered) <- c("mean", "min", "max", "tree")
+
+# view the result
+A_ordered

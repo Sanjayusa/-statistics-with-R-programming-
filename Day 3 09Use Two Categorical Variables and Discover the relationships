@@ -1,0 +1,19 @@
+# load the data from dataframe1
+dataframe1 <- data.frame(
+  Reference = c("KRXH", "KRPT", "FHRA", "CZKK", "CQTN", "PZXW", "SZRZ", "RMZE", "STNX", "TMDW"),
+  Status = c("Accepted", "Accepted", "Rejected", "Accepted", "Rejected", "Accepted", "Rejected", "Rejected", "Accepted", "Accepted"),
+  Gender = c("Female", "Male", "Male", "Female", "Female", "Female", "Male", "Female", "Female", "Female"),
+  TestNewOrFollowUp = c("Test1 New", "Test1 New", "Test2 New", "Test3 New", "Test1 New", "Follow-up", "Test4 New", "Test2 New", "Test3 New", "Test1 New")
+)
+
+# i) explore the relationship between two categorical variables
+# contingency table between Gender and Status
+gender_status <- table(dataframe1$Gender, dataframe1$Status)
+print(gender_status)
+
+# ii) create a table between Reference and Status
+reference_status <- xtabs(~ Reference + Status, data = dataframe1)
+print(reference_status)
+
+# iii) save the file in the name of dataframe2
+dataframe2 <- reference_status

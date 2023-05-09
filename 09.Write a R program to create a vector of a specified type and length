@@ -1,0 +1,46 @@
+i)
+# Numeric vector of length 10
+num_vec <- numeric(10)
+
+# Complex vector of length 10
+comp_vec <- complex(real = rnorm(10), imaginary = rnorm(10))
+
+# Logical vector of length 10
+log_vec <- logical(10)
+
+# Character vector of length 10
+char_vec <- c("apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "imbe", "jackfruit")
+
+ii)
+# Create a numeric vector
+vec <- c(5, 2, 9, 1, 8)
+
+# Sort vector in ascending order
+sort(vec)
+
+# Sort vector in descending order
+sort(vec, decreasing = TRUE)
+
+iii)
+# Create a numeric vector of length 10
+vec <- c(5, 7, 3, 8, 1, 9, 2, 6, 4, 10)
+
+# Extract values at positions 2, 3, 4 and 5
+vec[2:5]
+
+iv)
+# Create a numeric vector
+vec <- c(5, 2, 9, 1, 8)
+
+# Find the 2nd highest value
+sort(vec, decreasing = TRUE)[2]
+
+v)
+# Create a numeric vector with NA and NaN values
+vec <- c(5, 2, 9, 1, 8, NA, NaN)
+
+# Calculate sum, mean and product
+sum(vec, na.rm = TRUE,  na.rm = TRUE)
+mean(vec, na.rm = TRUE, na.rm = TRUE)
+prod(vec, na.rm = TRUE, na.rm = TRUE)
+

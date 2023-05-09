@@ -1,0 +1,37 @@
+library(dplyr)
+
+# Load the Pokémon dataset
+data <- read.csv("pokemon.csv")
+
+# Count the number of legendary Pokémon
+n_legendary <- data %>%
+  filter(legendary == TRUE) %>%
+  nrow()
+
+# Print the result
+cat("There are", n_legendary, "legendary Pokémon out of 801 total.")
+
+
+
+library(ggplot2)
+
+# Plot the height and weight of all Pokémon
+ggplot(data, aes(x = height_m, y = weight_kg)) +
+  geom_point() +
+  labs(x = "Height (m)", y = "Weight (kg)", title = "Pokémon Height and Weight") +
+  
+  # Highlight the legendary Pokémon
+  geom_point(data = filter(data, legendary == TRUE), color = "red", size = 3)
+
+
+
+
+# Plot the fighter stats for all Pokémon
+ggplot(data, aes(x = as.factor(type1), y = attack)) +
+  geom_boxplot() +
+  labs(x = "Type", y = "Attack", title = "Pokémon Fighter Stats by Type") +
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+  
+  # Highlight the legendary Pokémon
+  geom_jitter(data = filter(data, legendary == TRUE), aes(color = "red"), size = 3, alpha = 0.5) +
+  scale_color_manual(values = c("red" = "red"))

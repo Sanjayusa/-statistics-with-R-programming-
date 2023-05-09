@@ -1,0 +1,62 @@
+# define the winning numbers and her guesses
+winning_numbers <- c(4, 8, 15, 16, 23, 42)
+mom_guesses <- c(4, 8, 15, 16, 23, 42)
+
+# check if her guesses match the winning numbers
+if(all(mom_guesses == winning_numbers)) {
+  print("Mom wins the lottery!")
+} else {
+  print("Mom did not win the lottery.")
+}
+
+
+
+# define the number to check
+num <- 153
+
+# initialize variables
+n <- nchar(num)
+sum <- 0
+temp <- num
+
+# compute the sum of the cubes of the digits
+while(temp > 0) {
+  digit <- temp %% 10
+  sum <- sum + digit ^ n
+  temp <- floor(temp / 10)
+}
+
+# check if the number is an Armstrong number
+if(sum == num) {
+  print(paste(num, "is an Armstrong number."))
+} else {
+  print(paste(num, "is not an Armstrong number."))
+}
+
+
+
+
+kelvin_to_celsius <- function(temp_K) {
+  temp_C <- temp_K - 273.15
+  return(temp_C)
+}
+
+
+
+# define the class "bank_account"
+setClass("bank_account", slots = c(
+  name = "character",
+  account_number = "integer",
+  amount = "numeric"
+))
+
+# create an object of class "bank_account"
+my_account <- new("bank_account", name = "John Smith", account_number = 12345, amount = 5000)
+
+# define the print method for the "amount" attribute
+setMethod("print", signature = "amount", function(x) {
+  cat("Amount: $", x, "\n")
+})
+
+# print the amount of my_account
+print(my_account@amount)

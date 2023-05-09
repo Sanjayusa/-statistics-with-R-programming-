@@ -1,0 +1,37 @@
+i)
+
+library(ggplot2)
+
+ggplot(emp_data, aes(x = job_position, fill = gender)) +
+  geom_bar()
+
+ii)
+
+ggplot(emp_data, aes(x = job_position, fill = gender)) +
+  geom_bar() +
+  labs(title = "Job positions by gender", x = "Job position", y = "Employee count")
+
+iii)
+
+ggplot(emp_data, aes(x = job_position, fill = gender)) +
+  geom_bar() +
+  labs(title = "Job positions by gender", x = "Job position", y = "Employee count") +
+  theme_minimal()
+  
+ iv)
+ ggplot(emp_data, aes(x = job_position, fill = gender)) +
+  geom_bar() +
+  labs(title = "Job positions by gender", x = "Job position", y = "Employee count") +
+  scale_fill_manual(values = c("pink", "lightblue")) +
+  scale_color_manual(values = c("pink", "lightblue"))
+
+v)
+ggplot(emp_data, aes(x = job_position, fill = gender)) +
+  geom_bar() +
+  labs(title = "Job positions by gender", x = "Job position", y = "Employee count") +
+  scale_fill_manual(values = c("pink", "lightblue")) +
+  scale_color_manual(values = c("pink", "lightblue")) +
+  theme(legend.position = "top")
+
+ 
+

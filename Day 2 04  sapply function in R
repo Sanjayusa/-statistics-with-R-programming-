@@ -1,0 +1,10 @@
+# create a list
+my_list <- list(c(1,2,3), c(4,5,6), c(7,8,9))
+# define a function to calculate the sum of a vector
+get_sum <- function(x) {
+  sum(x)
+}
+# apply the get_sum function to each element of the list using sapply
+sum_vector <- sapply(my_list, get_sum)
+# print the results
+print(sum_vector)

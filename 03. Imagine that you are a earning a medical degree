@@ -1,0 +1,26 @@
+i)
+# Create weight vector
+weight <- c(71, 67, 83, 67)
+
+# Create height vector
+height <- c(1.75, 1.81, 1.78, 1.82, 1.97, 2.12, 1.75)
+# Calculate BMI
+bmi <- weight / (height^2)
+
+ii)
+# Create age vector
+age <- seq(from = 2, to = 30, by = 2)
+# View age
+age
+
+iii)
+# Subset data for adults 20 years and older
+adult_bmi <- bmi[age >= 20]
+adult_height <- height[age >= 20]
+adult_weight <- weight[age >= 20]
+
+# View subsetted data
+adult_bmi
+adult_height
+adult_weight
+

@@ -1,0 +1,12 @@
+# load the data from dataframe1
+dataframe1 <- data.frame(
+  Reference = c("KRXH", "KRPT", "FHRA", "CZKK", "CQTN", "PZXW", "SZRZ", "RMZE", "STNX", "TMDW"),
+  Status = c("Accepted", "Accepted", "Rejected", "Accepted", "Rejected", "Accepted", "Rejected", "Rejected", "Accepted", "Accepted"),
+  Gender = c("Female", "Male", "Male", "Female", "Female", "Female", "Male", "Female", "Female", "Female"),
+  TestNewOrFollowUp = c("Test1 New", "Test1 New", "Test2 New", "Test3 New", "Test1 New", "Follow-up", "Test4 New", "Test2 New", "Test3 New", "Test1 New")
+)
+library(tigerstats)
+# create the cross-tabulation with xtabs()
+xt <- xtabs(~ Status + TestNewOrFollowUp, data = dataframe1)
+# use colPerc() to calculate row percentages
+colPerc(xt)

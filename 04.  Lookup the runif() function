@@ -1,0 +1,29 @@
+# Create the matrix with random numbers
+set.seed(123)
+m <- matrix(runif(12), nrow = 3, ncol = 4, byrow = TRUE)
+
+# Name the columns and rows
+colnames(m) <- c("uno", "dos", "tres", "cuatro")
+rownames(m) <- c("x", "y", "z")
+
+# Scale the matrix by 10
+m <- m * 10
+
+# Display the matrix
+m
+
+i)
+
+# Extract a 2x4 matrix
+m2 <- m[c("x", "y"), ]
+
+# Display the extracted matrix
+m2
+
+ii)
+
+# Extract the "uno" column as a vector
+v <- m[, "uno"]
+
+# Display the extracted vector
+v

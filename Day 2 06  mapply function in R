@@ -1,0 +1,11 @@
+# create two vectors
+x <- c(1, 2, 3, 4)
+y <- c(5, 6, 7, 8)
+# define a function to add two numbers
+add <- function(a, b) {
+  return(a + b)}
+# use mapply to apply the add function to x and y
+result <- mapply(add, x, y)
+# print the results
+print(result)
+

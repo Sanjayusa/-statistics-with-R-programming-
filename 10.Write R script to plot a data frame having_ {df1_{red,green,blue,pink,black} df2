@@ -1,0 +1,48 @@
+# create the data frame
+df1 <- data.frame(colors = c("red", "green", "blue", "pink", "black"), 
+                  values = c(3, 5, 8, 10, 34))
+
+# plot the data
+barplot(df1$values, names.arg = df1$colors, col = df1$colors, 
+        xlab = "Colors", ylab = "Values", main = "Data Frame Plot")
+
+
+
+# get input from user
+num <- as.integer(readline("Enter a number: "))
+
+# initialize factorial and counter
+factorial <- 1
+i <- 1
+
+# calculate factorial using while loop
+while (i <= num) {
+  factorial <- factorial * i
+  i <- i + 1
+}
+
+# display factorial
+cat("The factorial of", num, "is", factorial, "\n")
+
+
+
+# create the list object
+store_items <- list(
+  Fruits = c("orange", "mango", "apple", "watermelon", "banana"),
+  Juices = c("appy", "fruity", "slice"),
+  Milkshakes = c("Mango", "papaya", "chocolate", "Rose")
+)
+
+# display the list object
+store_items
+
+
+
+# create a vector of survey scores
+survey_scores <- c(90, 50, 70, 80, 70, 60, 20, 30, 80, 90, 20)
+
+# compute the average using the mean() function
+survey_average <- mean(survey_scores)
+
+# display the average
+cat("The average survey score is", survey_average, "\n")

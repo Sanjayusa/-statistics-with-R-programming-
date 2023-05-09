@@ -1,0 +1,18 @@
+# convert Titanic to a data frame
+Titanic_df <- as.data.frame(Titanic)
+
+# subset the data frame to get the desired rows and columns
+df <- Titanic_df[Titanic_df$Class == "1st" & Titanic_df$Survived == "No", c("Sex", "Age", "Freq")]
+
+# rename the columns
+names(df) <- c("Sex", "Age", "Freq")
+
+# display the resulting data frame
+df
+
+
+     Sex   Age Freq
+1   Male Child    0
+5 Female Child    0
+9   Male Adult  118
+13 Female Adult    4

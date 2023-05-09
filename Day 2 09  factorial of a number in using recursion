@@ -1,0 +1,14 @@
+Write a program to find factorial of a number in R using recursion.
+# define a function to calculate factorial using recursion
+factorial <- function(n) {
+  if (n == 0) {
+    return(1)
+  } else {
+    return(n * factorial(n-1))}}
+# test the function with some values
+num1 <- 5
+result1 <- factorial(num1)
+print(paste("Factorial of", num1, "is", result1))
+num2 <- 8
+result2 <- factorial(num2)
+print(paste("Factorial of", num2, "is", result2))

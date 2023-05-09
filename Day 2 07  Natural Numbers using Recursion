@@ -1,0 +1,12 @@
+# define a function to find the sum of n natural numbers
+sum_natural <- function(n) {
+  if (n == 0) {
+    return(0)
+  } else {
+    return(n + sum_natural(n-1))
+  }
+}
+# call the function with n=10
+result <- sum_natural(10)
+# print the result
+print(result)

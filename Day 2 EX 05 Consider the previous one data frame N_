@@ -1,0 +1,16 @@
+# create data frame N
+N <- data.frame(
+ Id = c(1, 2, 3, 4),
+  Age = c(14, 12, 15, 10),
+  Sex = c("F", "M", "M", "F"),
+  Code = c("a", "b", "c", "d"),
+  score = c(99, 94, 98, 100)
+)
+# remove the variables Sex and Code
+N <- N[, c("Id", "Age", "score")]
+# reshape N to the desired format
+N_long <- reshape2::melt(N, id.vars = "Id")
+# rename the variable names
+names(N_long) <- c("values", "ind")
+# print the resulting data frame
+print(N_long)

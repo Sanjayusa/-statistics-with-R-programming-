@@ -1,0 +1,5 @@
+merged_data <- merge(buildings, data)
+merged_data <- merge(buildings, data, by = "location", all = TRUE)
+merged_data <- merge(buildings, data, by = "location", all.x = TRUE)
+merged_data <- merge(buildings, data, by = "location", all.y = TRUE)
+merged_data <- merge(buildings, data)

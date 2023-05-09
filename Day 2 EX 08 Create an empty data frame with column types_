@@ -1,0 +1,5 @@
+df <- data.frame(IntsLogicals = integer(),
+                 Doubles = double(),
+                 Characters = character(),
+                 row.names = character(0))
+names(df) <- c("MyIntsLogicals", "MyDoubles", "MyCharacters")

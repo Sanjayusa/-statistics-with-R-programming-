@@ -1,0 +1,27 @@
+i)a) Write suitable R code to compute the average of the following values.
+12,7,3,4.2,18,2,54,-21,8,-5
+
+# create a vector of values
+values <- c(12, 7, 3, 4.2, 18, 2, 54, -21, 8, -5)
+# compute the average
+mean(values)
+
+
+b) Compute the mean after applying the trim option and removing 3 values from each
+end.
+# create a vector of numeric values
+values <- c(12, 7, 3, 4.2, 18, 2, 54, -21, 8, -5)
+# compute the mean after trimming 3 values from each end
+mean(values, trim = 0.3)
+
+
+c) Compute the mean of the following vector .
+(12,7,3,4.2,18,2,54,-21,8,-5,NA)
+#If there are missing values, then the mean function returns NA.
+# Find mean dropping NA values.
+#To drop the missing values from the calculation use na.rm = TRUE
+
+# create a vector of values
+values <- c(12, 7, 3, 4.2, 18, 2, 54, -21, 8, -5, NA)
+# compute the mean while dropping any missing values
+mean(values, na.rm = TRUE)

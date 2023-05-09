@@ -1,0 +1,12 @@
+# create a data frame with three variables: name, age, and score
+my_data <- data.frame(name = c("Alice", "Bob", "Charlie", "David", "Eve"),
+                      age = c(20, 25, 30, 35, 40),
+                      score = c(80, 75, 90, 85, 95))
+
+
+# calculate the mean score by age group using tapply
+mean_score <- tapply(my_data$score, my_data$age, mean)
+
+
+# print the results
+print(mean_score)

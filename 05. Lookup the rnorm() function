@@ -1,0 +1,31 @@
+i)
+# Create matrix A with random values
+A <- matrix(rnorm(12), nrow = 3, ncol = 4)
+
+# Create matrix B with random values
+B <- matrix(rnorm(12), nrow = 3, ncol = 4)
+
+# View matrices
+A
+B
+
+ii)
+# Perform matrix multiplication
+C <- A * B
+
+# View resulting matrix
+C
+
+iii)
+# Perform inner matrix multiplication
+D <- A %*% t(B)
+
+# View resulting matrix
+D
+
+
+iv)
+# Create a vector of BMI values (example data)
+bmi <- c(23.2, 
+
+

@@ -1,0 +1,39 @@
+i)
+# Load the mtcars dataset
+data(mtcars)
+
+# Fit the linear regression model
+model <- lm(mpg ~ hp + wt + cyl + am, data = mtcars)
+
+# Print the model summary
+summary(model)
+
+
+ii)
+# Load the airquality dataset
+data(airquality)
+
+# Melt the dataset
+library(reshape2)
+melted_data <- melt(airquality)
+# Display the melted data
+head(melted_data)
+# Melt the dataset and specify month and day as ID variables
+melted_data <- melt(airquality, id.vars = c("Month", "Day"))
+# Display the melted data
+head(melted_data)
+# Cast the melted data
+cast_data <- dcast(melted_data, Month ~ variable)
+
+iii) 
+# Display the casted data
+head(cast_data)
+# Compute the average of Ozone, Solar.R, Wind, and Temperature per month
+library(dplyr)
+averages <- melted_data %>%
+  group_by(Month, variable) %>%
+  summarize(avg_value = mean(value, na.rm = TRUE)) %>%
+  dcast(Month ~ variable, value.var = "avg_value")
+
+# Display the average values
+head(averages)

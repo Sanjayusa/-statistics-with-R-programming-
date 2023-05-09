@@ -1,0 +1,9 @@
+# create a matrix
+m <- matrix(c(1:9), nrow = 3)
+# apply the sum function over the rows
+row_sums <- apply(m, 1, sum)
+# apply the sum function over the columns
+col_sums <- apply(m, 2, sum)
+# print the results
+print(row_sums)
+print(col_sums)
